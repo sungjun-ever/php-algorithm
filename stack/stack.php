@@ -19,11 +19,6 @@ class Stack
         return array_pop($this->stack);
     }
 
-    public function printPtr()
-    {
-        return $this->ptr;
-    }
-
     public function top()
     {
         return $this->stack[$this->ptr-1];
@@ -43,7 +38,7 @@ for($i=0; $i<5; $i++){
 var_dump($a->stack);
 $a->pop();
 $a->pop();
-echo '<br>현재 포인터는 '.$a->printPtr();
+echo '<br>현재 포인터는 '.$a->ptr;
 echo '<br>현재 탑은 '.$a->top().'<br>';
 var_dump($a->stack);
 $a->clear();
