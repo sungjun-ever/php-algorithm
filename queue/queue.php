@@ -25,6 +25,10 @@ class Queue
         return $this->queue[$this->rightPtr-1];
     }
 
+    public function clear()
+    {
+        return $this->queue = [];
+    }
 }
 
 $a = new Queue();
@@ -35,4 +39,6 @@ var_dump($a->queue);
 echo '<br>POP: '.$a->pop();
 echo '<br>왼쪽 포인터는 '.$a->leftPtr;
 echo '<br>오른쪽 포인터는 '.$a->rightPtr;
-echo '<br>TOP: '.$a->top();
+echo '<br>TOP: '.$a->top().'<br>';
+$a->clear();
+var_dump($a->queue);
